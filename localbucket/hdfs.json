@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1732796705822,
+    "description" : "",
+    "identifier" : "hdfs",
+    "lastModifiedTimestamp" : 1732796705822,
+    "name" : "hdfs",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
