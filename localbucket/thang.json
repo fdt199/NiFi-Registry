@@ -1,0 +1,417 @@
+{
+  "externalControllerServices" : { },
+  "flow" : {
+    "createdTimestamp" : 1732795702943,
+    "description" : "",
+    "identifier" : "thang",
+    "lastModifiedTimestamp" : 1732795702943,
+    "name" : "thang",
+    "versionCount" : 0
+  },
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "new",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-aws-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "99f81680-0b8c-35bd-8157-01b6e8dd97b6",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "CopyS3Object",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -352.0,
+        "y" : -200.0
+      },
+      "properties" : {
+        "Source Key" : "${filename}",
+        "FullControl User List" : "${s3.permissions.full.users}",
+        "Owner" : "${s3.owner}",
+        "Destination Key" : "${filename}-1",
+        "canned-acl" : "${s3.permissions.cannedacl}",
+        "Signer Override" : "Default Signature",
+        "Write Permission User List" : "${s3.permissions.write.users}",
+        "Communications Timeout" : "30 secs",
+        "Region" : "us-west-2",
+        "Read Permission User List" : "${s3.permissions.read.users}",
+        "Write ACL User List" : "${s3.permissions.writeacl.users}",
+        "Read ACL User List" : "${s3.permissions.readacl.users}",
+        "Source Bucket" : "${s3.bucket}"
+      },
+      "propertyDescriptors" : {
+        "Source Key" : {
+          "displayName" : "Source Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Source Key",
+          "sensitive" : false
+        },
+        "FullControl User List" : {
+          "displayName" : "FullControl User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FullControl User List",
+          "sensitive" : false
+        },
+        "Owner" : {
+          "displayName" : "Owner",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Owner",
+          "sensitive" : false
+        },
+        "Destination Key" : {
+          "displayName" : "Destination Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Destination Key",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Endpoint Override URL" : {
+          "displayName" : "Endpoint Override URL",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint Override URL",
+          "sensitive" : false
+        },
+        "custom-signer-class-name" : {
+          "displayName" : "Custom Signer Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-class-name",
+          "sensitive" : false
+        },
+        "canned-acl" : {
+          "displayName" : "Canned ACL",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canned-acl",
+          "sensitive" : false
+        },
+        "AWS Credentials Provider service" : {
+          "displayName" : "AWS Credentials Provider Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "AWS Credentials Provider service",
+          "sensitive" : false
+        },
+        "custom-signer-module-location" : {
+          "displayName" : "Custom Signer Module Location",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-module-location",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Signer Override" : {
+          "displayName" : "Signer Override",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Signer Override",
+          "sensitive" : false
+        },
+        "Write Permission User List" : {
+          "displayName" : "Write Permission User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Write Permission User List",
+          "sensitive" : false
+        },
+        "Communications Timeout" : {
+          "displayName" : "Communications Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Communications Timeout",
+          "sensitive" : false
+        },
+        "Region" : {
+          "displayName" : "Region",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Region",
+          "sensitive" : false
+        },
+        "Read Permission User List" : {
+          "displayName" : "Read Permission User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Read Permission User List",
+          "sensitive" : false
+        },
+        "Write ACL User List" : {
+          "displayName" : "Write ACL User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Write ACL User List",
+          "sensitive" : false
+        },
+        "Destination Bucket" : {
+          "displayName" : "Destination Bucket",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Destination Bucket",
+          "sensitive" : false
+        },
+        "Read ACL User List" : {
+          "displayName" : "Read ACL User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Read ACL User List",
+          "sensitive" : false
+        },
+        "Source Bucket" : {
+          "displayName" : "Source Bucket",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Source Bucket",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.aws.s3.CopyS3Object",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-aws-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b8a46340-a9f7-3315-a871-697533854f96",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "DeleteS3Object",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -377.0,
+        "y" : -361.5
+      },
+      "properties" : {
+        "FullControl User List" : "${s3.permissions.full.users}",
+        "Owner" : "${s3.owner}",
+        "Object Key" : "${filename}",
+        "Signer Override" : "Default Signature",
+        "Bucket" : "${s3.bucket}",
+        "Write Permission User List" : "${s3.permissions.write.users}",
+        "Communications Timeout" : "30 secs",
+        "Region" : "us-west-2",
+        "Read Permission User List" : "${s3.permissions.read.users}",
+        "Write ACL User List" : "${s3.permissions.writeacl.users}",
+        "Read ACL User List" : "${s3.permissions.readacl.users}"
+      },
+      "propertyDescriptors" : {
+        "FullControl User List" : {
+          "displayName" : "FullControl User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FullControl User List",
+          "sensitive" : false
+        },
+        "Owner" : {
+          "displayName" : "Owner",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Owner",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Endpoint Override URL" : {
+          "displayName" : "Endpoint Override URL",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint Override URL",
+          "sensitive" : false
+        },
+        "custom-signer-class-name" : {
+          "displayName" : "Custom Signer Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-class-name",
+          "sensitive" : false
+        },
+        "Object Key" : {
+          "displayName" : "Object Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Object Key",
+          "sensitive" : false
+        },
+        "AWS Credentials Provider service" : {
+          "displayName" : "AWS Credentials Provider Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "AWS Credentials Provider service",
+          "sensitive" : false
+        },
+        "custom-signer-module-location" : {
+          "displayName" : "Custom Signer Module Location",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-module-location",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Signer Override" : {
+          "displayName" : "Signer Override",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Signer Override",
+          "sensitive" : false
+        },
+        "Bucket" : {
+          "displayName" : "Bucket",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Bucket",
+          "sensitive" : false
+        },
+        "Version" : {
+          "displayName" : "Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Version",
+          "sensitive" : false
+        },
+        "Write Permission User List" : {
+          "displayName" : "Write Permission User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Write Permission User List",
+          "sensitive" : false
+        },
+        "Communications Timeout" : {
+          "displayName" : "Communications Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Communications Timeout",
+          "sensitive" : false
+        },
+        "Region" : {
+          "displayName" : "Region",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Region",
+          "sensitive" : false
+        },
+        "Read Permission User List" : {
+          "displayName" : "Read Permission User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Read Permission User List",
+          "sensitive" : false
+        },
+        "Write ACL User List" : {
+          "displayName" : "Write ACL User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Write ACL User List",
+          "sensitive" : false
+        },
+        "Read ACL User List" : {
+          "displayName" : "Read ACL User List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Read ACL User List",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.aws.s3.DeleteS3Object",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "35778362-1057-4456-b127-9540440cb899",
+    "flowIdentifier" : "thang",
+    "timestamp" : 0
+  }
+}
