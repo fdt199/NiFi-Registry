@@ -1,0 +1,1530 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : {
+        "083075c2-e54a-3d93-9708-d7c757c23b42" : {
+          "identifier" : "083075c2-e54a-3d93-9708-d7c757c23b42",
+          "name" : "JsonRecordSetWriter"
+        },
+        "bd613d27-2c87-3064-8608-4687c744343a" : {
+          "identifier" : "bd613d27-2c87-3064-8608-4687c744343a",
+          "name" : "AvroReader"
+        },
+        "f5cb555c-f2aa-3ba8-8094-698275f82aee" : {
+          "identifier" : "f5cb555c-f2aa-3ba8-8094-698275f82aee",
+          "name" : "JsonTreeReader"
+        },
+        "1fa81f93-2c41-396e-9848-7919b66570c6" : {
+          "identifier" : "1fa81f93-2c41-396e-9848-7919b66570c6",
+          "name" : "oracle"
+        }
+      },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "d0ea7356-9940-38ab-82f0-86c39e10069b",
+            "instanceIdentifier" : "52f65195-0193-1000-a0d0-cf6cb073e998",
+            "name" : "NDAPPutDatabaseRecord22112024",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "dbc2e93f-5aa0-3bb6-a792-10581e2e1fb1",
+          "instanceIdentifier" : "52e89047-0193-1000-e53a-7ed4b90f9777",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "c89ab6bd-b5c1-3dc9-aea2-374eb1f023f0",
+            "instanceIdentifier" : "1a4cd356-0193-1000-179e-2be5120e541b",
+            "name" : "FetchFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "40f1bddf-1884-3987-8338-0071a8ef6529",
+            "instanceIdentifier" : "1a4ce9c3-0193-1000-a667-a2a1543f3486",
+            "name" : "PutDatabaseRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "dde3fcb2-7112-3094-9428-52059dcd2627",
+          "instanceIdentifier" : "23c7effd-0193-1000-bee4-ccbcf3dcb67e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "07689986-c7ee-3bc6-95e8-9038266a642e",
+            "instanceIdentifier" : "23c7df87-0193-1000-fab9-2e0b484bdf96",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "7d274e8a-dbe8-37b2-87ad-32c438089e52",
+            "instanceIdentifier" : "1a4ddd13-0193-1000-6579-2fa8ff3337a4",
+            "name" : "Wait",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "8a0d10de-af26-39e5-a86e-45be04eee966",
+          "instanceIdentifier" : "52f6642c-0193-1000-d19e-b9607046fb16",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "d0ea7356-9940-38ab-82f0-86c39e10069b",
+            "instanceIdentifier" : "52f65195-0193-1000-a0d0-cf6cb073e998",
+            "name" : "NDAPPutDatabaseRecord22112024",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "7d274e8a-dbe8-37b2-87ad-32c438089e52",
+            "instanceIdentifier" : "1a4ddd13-0193-1000-6579-2fa8ff3337a4",
+            "name" : "Wait",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "b7077e88-8e1e-3cdd-9b0d-5594ceef6017",
+          "instanceIdentifier" : "1a4debec-0193-1000-b273-bc78b07a38e6",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "40f1bddf-1884-3987-8338-0071a8ef6529",
+            "instanceIdentifier" : "1a4ce9c3-0193-1000-a667-a2a1543f3486",
+            "name" : "PutDatabaseRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "7d274e8a-dbe8-37b2-87ad-32c438089e52",
+            "instanceIdentifier" : "1a4ddd13-0193-1000-6579-2fa8ff3337a4",
+            "name" : "Wait",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "d37a3a51-1fcd-3d0e-be2b-b6632af81195",
+          "instanceIdentifier" : "52e5e163-0193-1000-9279-241019ae217f",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "41718fcb-b60a-3d21-a0c0-7282763f41f5",
+            "instanceIdentifier" : "52e56cca-0193-1000-d887-081a0b99879c",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "7d274e8a-dbe8-37b2-87ad-32c438089e52",
+            "instanceIdentifier" : "1a4ddd13-0193-1000-6579-2fa8ff3337a4",
+            "name" : "Wait",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "550bb099-b184-346f-96e1-bb21b430f18a",
+          "instanceIdentifier" : "249ba7ec-0193-1000-6756-ab0c0702385f",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "2dd2c9e4-4146-39c1-b96e-55f40560ab0d",
+            "instanceIdentifier" : "249b8781-0193-1000-4b33-c2913d34aeaa",
+            "name" : "NDAPPutDatabaseRecord20241312",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "41718fcb-b60a-3d21-a0c0-7282763f41f5",
+            "instanceIdentifier" : "52e56cca-0193-1000-d887-081a0b99879c",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "cc43735e-faf6-337b-9924-6796a171936a",
+          "instanceIdentifier" : "52e8a0ec-0193-1000-043d-52971e56ad2e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "2ce01a7e-5fc2-3866-bbe6-6a41f3804e5a",
+            "instanceIdentifier" : "52e87da6-0193-1000-5441-e9cd695871fb",
+            "name" : "SplitRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "2dd2c9e4-4146-39c1-b96e-55f40560ab0d",
+            "instanceIdentifier" : "249b8781-0193-1000-4b33-c2913d34aeaa",
+            "name" : "NDAPPutDatabaseRecord20241312",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "f166e7f2-7a5d-39c4-915b-69c1d032b376",
+          "instanceIdentifier" : "249b9879-0193-1000-2628-01bc4447cbfd",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "07689986-c7ee-3bc6-95e8-9038266a642e",
+            "instanceIdentifier" : "23c7df87-0193-1000-fab9-2e0b484bdf96",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "c89ab6bd-b5c1-3dc9-aea2-374eb1f023f0",
+            "instanceIdentifier" : "1a4cd356-0193-1000-179e-2be5120e541b",
+            "name" : "FetchFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "d1c20bf4-acde-379c-a1f0-7d2d246e50e3",
+          "instanceIdentifier" : "1a4cf320-0193-1000-264a-eabde45f53e1",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+            "id" : "0e8b6025-2ebf-3bca-8238-cfe08f968c6c",
+            "instanceIdentifier" : "1a4cb904-0193-1000-f644-cb36ac358cae",
+            "name" : "ListFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "05034963-0193-1000-6f48-a5b9dea913d9",
+        "labels" : [ ],
+        "name" : "nifi write oracle",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : -2088.0,
+          "y" : 344.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "failure", "retry" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-ndap-nar",
+            "group" : "com.techx.nifi.processor",
+            "version" : "1.24.0-22112024"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "d0ea7356-9940-38ab-82f0-86c39e10069b",
+          "instanceIdentifier" : "52f65195-0193-1000-a0d0-cf6cb073e998",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "NDAPPutDatabaseRecord22112024",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 432.0,
+            "y" : 456.0
+          },
+          "properties" : {
+            "put-db-record-allow-multiple-statements" : "false",
+            "put-db-record-unmatched-column-behavior" : "Fail on Unmatched Columns",
+            "put-db-record-dbcp-service" : "1fa81f93-2c41-396e-9848-7919b66570c6",
+            "put-db-record-statement-type" : "INSERT",
+            "put-db-record-quoted-identifiers" : "false",
+            "put-db-record-unmatched-field-behavior" : "Ignore Unmatched Fields",
+            "put-db-record-max-batch-size" : "1000",
+            "table-schema-cache-size" : "100",
+            "put-db-record-date-format" : "yyyy-MM-dd",
+            "put-db-record-quoted-table-identifiers" : "false",
+            "put-db-record-translate-field-names" : "true",
+            "put-db-record-time-format" : "HH:mm:ss",
+            "put-db-record-query-timeout" : "0 seconds",
+            "rollback-on-failure" : "false",
+            "db-type" : "Oracle 12+",
+            "put-db-record-timestamp-format" : "yyyy-MM-dd HH:mm:ss",
+            "put-db-record-table-name" : "CASE_LOG",
+            "put-db-record-record-reader" : "bd613d27-2c87-3064-8608-4687c744343a"
+          },
+          "propertyDescriptors" : {
+            "put-db-record-allow-multiple-statements" : {
+              "displayName" : "Allow Multiple SQL Statements",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-allow-multiple-statements",
+              "sensitive" : false
+            },
+            "put-db-record-schema-name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-schema-name",
+              "sensitive" : false
+            },
+            "put-db-record-field-containing-sql" : {
+              "displayName" : "Field Containing SQL",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-field-containing-sql",
+              "sensitive" : false
+            },
+            "put-db-record-unmatched-column-behavior" : {
+              "displayName" : "Unmatched Column Behavior",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-unmatched-column-behavior",
+              "sensitive" : false
+            },
+            "put-db-record-catalog-name" : {
+              "displayName" : "Catalog Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-catalog-name",
+              "sensitive" : false
+            },
+            "put-db-record-dbcp-service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "put-db-record-dbcp-service",
+              "sensitive" : false
+            },
+            "put-db-record-statement-type" : {
+              "displayName" : "Statement Type",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-statement-type",
+              "sensitive" : false
+            },
+            "put-db-record-update-keys" : {
+              "displayName" : "Update Keys",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-update-keys",
+              "sensitive" : false
+            },
+            "put-db-record-quoted-identifiers" : {
+              "displayName" : "Quote Column Identifiers",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-quoted-identifiers",
+              "sensitive" : false
+            },
+            "put-db-record-unmatched-field-behavior" : {
+              "displayName" : "Unmatched Field Behavior",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-unmatched-field-behavior",
+              "sensitive" : false
+            },
+            "put-db-record-max-batch-size" : {
+              "displayName" : "Maximum Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-max-batch-size",
+              "sensitive" : false
+            },
+            "Data Record Path" : {
+              "displayName" : "Data Record Path",
+              "identifiesControllerService" : false,
+              "name" : "Data Record Path",
+              "sensitive" : false
+            },
+            "table-schema-cache-size" : {
+              "displayName" : "Table Schema Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "table-schema-cache-size",
+              "sensitive" : false
+            },
+            "put-db-record-date-format" : {
+              "displayName" : "Date Format",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-date-format",
+              "sensitive" : false
+            },
+            "put-db-record-quoted-table-identifiers" : {
+              "displayName" : "Quote Table Identifiers",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-quoted-table-identifiers",
+              "sensitive" : false
+            },
+            "Statement Type Record Path" : {
+              "displayName" : "Statement Type Record Path",
+              "identifiesControllerService" : false,
+              "name" : "Statement Type Record Path",
+              "sensitive" : false
+            },
+            "put-db-record-translate-field-names" : {
+              "displayName" : "Translate Field Names",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-translate-field-names",
+              "sensitive" : false
+            },
+            "put-db-record-time-format" : {
+              "displayName" : "Time Format",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-time-format",
+              "sensitive" : false
+            },
+            "put-db-record-query-timeout" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-query-timeout",
+              "sensitive" : false
+            },
+            "rollback-on-failure" : {
+              "displayName" : "Rollback On Failure",
+              "identifiesControllerService" : false,
+              "name" : "rollback-on-failure",
+              "sensitive" : false
+            },
+            "db-type" : {
+              "displayName" : "Database Type",
+              "identifiesControllerService" : false,
+              "name" : "db-type",
+              "sensitive" : false
+            },
+            "put-db-record-timestamp-format" : {
+              "displayName" : "Timestamp Format",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-timestamp-format",
+              "sensitive" : false
+            },
+            "put-db-record-table-name" : {
+              "displayName" : "Table Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-table-name",
+              "sensitive" : false
+            },
+            "put-db-record-int96-fields" : {
+              "displayName" : "INT96 Fields",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-int96-fields",
+              "sensitive" : false
+            },
+            "put-db-record-record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "put-db-record-record-reader",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "com.techx.nifi.processor.standard.NDAPPutDatabaseRecord22112024",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure", "retry" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "40f1bddf-1884-3987-8338-0071a8ef6529",
+          "instanceIdentifier" : "1a4ce9c3-0193-1000-a667-a2a1543f3486",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutDatabaseRecord",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 914.0000620524788,
+            "y" : 324.99999477229534
+          },
+          "properties" : {
+            "put-db-record-allow-multiple-statements" : "false",
+            "table-schema-cache-size" : "100",
+            "put-db-record-quoted-table-identifiers" : "false",
+            "put-db-record-unmatched-column-behavior" : "Fail on Unmatched Columns",
+            "put-db-record-translate-field-names" : "true",
+            "put-db-record-dcbp-service" : "1fa81f93-2c41-396e-9848-7919b66570c6",
+            "put-db-record-query-timeout" : "0 seconds",
+            "rollback-on-failure" : "false",
+            "put-db-record-statement-type" : "INSERT",
+            "db-type" : "Oracle 12+",
+            "put-db-record-quoted-identifiers" : "false",
+            "put-db-record-table-name" : "CASE_LOG",
+            "put-db-record-unmatched-field-behavior" : "Ignore Unmatched Fields",
+            "put-db-record-max-batch-size" : "1000",
+            "put-db-record-record-reader" : "bd613d27-2c87-3064-8608-4687c744343a"
+          },
+          "propertyDescriptors" : {
+            "put-db-record-allow-multiple-statements" : {
+              "displayName" : "Allow Multiple SQL Statements",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-allow-multiple-statements",
+              "sensitive" : false
+            },
+            "table-schema-cache-size" : {
+              "displayName" : "Table Schema Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "table-schema-cache-size",
+              "sensitive" : false
+            },
+            "put-db-record-schema-name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-schema-name",
+              "sensitive" : false
+            },
+            "put-db-record-field-containing-sql" : {
+              "displayName" : "Field Containing SQL",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-field-containing-sql",
+              "sensitive" : false
+            },
+            "put-db-record-quoted-table-identifiers" : {
+              "displayName" : "Quote Table Identifiers",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-quoted-table-identifiers",
+              "sensitive" : false
+            },
+            "Statement Type Record Path" : {
+              "displayName" : "Statement Type Record Path",
+              "identifiesControllerService" : false,
+              "name" : "Statement Type Record Path",
+              "sensitive" : false
+            },
+            "put-db-record-unmatched-column-behavior" : {
+              "displayName" : "Unmatched Column Behavior",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-unmatched-column-behavior",
+              "sensitive" : false
+            },
+            "put-db-record-catalog-name" : {
+              "displayName" : "Catalog Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-catalog-name",
+              "sensitive" : false
+            },
+            "put-db-record-translate-field-names" : {
+              "displayName" : "Translate Field Names",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-translate-field-names",
+              "sensitive" : false
+            },
+            "put-db-record-dcbp-service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "put-db-record-dcbp-service",
+              "sensitive" : false
+            },
+            "put-db-record-query-timeout" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-query-timeout",
+              "sensitive" : false
+            },
+            "rollback-on-failure" : {
+              "displayName" : "Rollback On Failure",
+              "identifiesControllerService" : false,
+              "name" : "rollback-on-failure",
+              "sensitive" : false
+            },
+            "put-db-record-statement-type" : {
+              "displayName" : "Statement Type",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-statement-type",
+              "sensitive" : false
+            },
+            "db-type" : {
+              "displayName" : "Database Type",
+              "identifiesControllerService" : false,
+              "name" : "db-type",
+              "sensitive" : false
+            },
+            "put-db-record-update-keys" : {
+              "displayName" : "Update Keys",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-update-keys",
+              "sensitive" : false
+            },
+            "put-db-record-quoted-identifiers" : {
+              "displayName" : "Quote Column Identifiers",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-quoted-identifiers",
+              "sensitive" : false
+            },
+            "put-db-record-table-name" : {
+              "displayName" : "Table Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-table-name",
+              "sensitive" : false
+            },
+            "put-db-record-unmatched-field-behavior" : {
+              "displayName" : "Unmatched Field Behavior",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-unmatched-field-behavior",
+              "sensitive" : false
+            },
+            "put-db-record-max-batch-size" : {
+              "displayName" : "Maximum Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-max-batch-size",
+              "sensitive" : false
+            },
+            "put-db-record-record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "put-db-record-record-reader",
+              "sensitive" : false
+            },
+            "Data Record Path" : {
+              "displayName" : "Data Record Path",
+              "identifiesControllerService" : false,
+              "name" : "Data Record Path",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutDatabaseRecord",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "7d274e8a-dbe8-37b2-87ad-32c438089e52",
+          "instanceIdentifier" : "1a4ddd13-0193-1000-6579-2fa8ff3337a4",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Wait",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 968.0,
+            "y" : 616.0
+          },
+          "properties" : {
+            "wait-buffer-count" : "1",
+            "wait-mode" : "wait",
+            "attribute-copy-mode" : "keeporiginal",
+            "releasable-flowfile-count" : "1",
+            "expiration-duration" : "10 min",
+            "target-signal-count" : "1"
+          },
+          "propertyDescriptors" : {
+            "wait-buffer-count" : {
+              "displayName" : "Wait Buffer Count",
+              "identifiesControllerService" : false,
+              "name" : "wait-buffer-count",
+              "sensitive" : false
+            },
+            "wait-mode" : {
+              "displayName" : "Wait Mode",
+              "identifiesControllerService" : false,
+              "name" : "wait-mode",
+              "sensitive" : false
+            },
+            "attribute-copy-mode" : {
+              "displayName" : "Attribute Copy Mode",
+              "identifiesControllerService" : false,
+              "name" : "attribute-copy-mode",
+              "sensitive" : false
+            },
+            "distributed-cache-service" : {
+              "displayName" : "Distributed Cache Service",
+              "identifiesControllerService" : true,
+              "name" : "distributed-cache-service",
+              "sensitive" : false
+            },
+            "releasable-flowfile-count" : {
+              "displayName" : "Releasable FlowFile Count",
+              "identifiesControllerService" : false,
+              "name" : "releasable-flowfile-count",
+              "sensitive" : false
+            },
+            "release-signal-id" : {
+              "displayName" : "Release Signal Identifier",
+              "identifiesControllerService" : false,
+              "name" : "release-signal-id",
+              "sensitive" : false
+            },
+            "signal-counter-name" : {
+              "displayName" : "Signal Counter Name",
+              "identifiesControllerService" : false,
+              "name" : "signal-counter-name",
+              "sensitive" : false
+            },
+            "expiration-duration" : {
+              "displayName" : "Expiration Duration",
+              "identifiesControllerService" : false,
+              "name" : "expiration-duration",
+              "sensitive" : false
+            },
+            "target-signal-count" : {
+              "displayName" : "Target Signal Count",
+              "identifiesControllerService" : false,
+              "name" : "target-signal-count",
+              "sensitive" : false
+            },
+            "wait-penalty-duration" : {
+              "displayName" : "Wait Penalty Duration",
+              "identifiesControllerService" : false,
+              "name" : "wait-penalty-duration",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.Wait",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure", "retry" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-ndap-nar",
+            "group" : "com.techx.nifi.processor",
+            "version" : "1.24.0-20241312"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "2dd2c9e4-4146-39c1-b96e-55f40560ab0d",
+          "instanceIdentifier" : "249b8781-0193-1000-4b33-c2913d34aeaa",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "NDAPPutDatabaseRecord20241312",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1784.0,
+            "y" : 352.0
+          },
+          "properties" : {
+            "put-db-record-allow-multiple-statements" : "false",
+            "put-db-record-unmatched-column-behavior" : "Fail on Unmatched Columns",
+            "put-db-record-dbcp-service" : "1fa81f93-2c41-396e-9848-7919b66570c6",
+            "put-db-record-statement-type" : "INSERT",
+            "put-db-record-quoted-identifiers" : "false",
+            "put-db-record-unmatched-field-behavior" : "Ignore Unmatched Fields",
+            "put-db-record-max-batch-size" : "1000",
+            "table-schema-cache-size" : "100",
+            "put-db-record-date-format" : "yyyy-MM-dd",
+            "put-db-record-quoted-table-identifiers" : "false",
+            "put-db-record-translate-field-names" : "true",
+            "put-db-record-time-format" : "HH:mm:ss",
+            "put-db-record-query-timeout" : "0 seconds",
+            "rollback-on-failure" : "false",
+            "db-type" : "Oracle 12+",
+            "put-db-record-timestamp-format" : "yyyy-MM-dd HH:mm:ss",
+            "put-db-record-table-name" : "STG_EBA_AUDIT_LOG_INTF",
+            "put-db-record-record-reader" : "f5cb555c-f2aa-3ba8-8094-698275f82aee"
+          },
+          "propertyDescriptors" : {
+            "put-db-record-allow-multiple-statements" : {
+              "displayName" : "Allow Multiple SQL Statements",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-allow-multiple-statements",
+              "sensitive" : false
+            },
+            "put-db-record-schema-name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-schema-name",
+              "sensitive" : false
+            },
+            "put-db-record-field-containing-sql" : {
+              "displayName" : "Field Containing SQL",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-field-containing-sql",
+              "sensitive" : false
+            },
+            "put-db-record-unmatched-column-behavior" : {
+              "displayName" : "Unmatched Column Behavior",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-unmatched-column-behavior",
+              "sensitive" : false
+            },
+            "put-db-record-catalog-name" : {
+              "displayName" : "Catalog Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-catalog-name",
+              "sensitive" : false
+            },
+            "put-db-record-dbcp-service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "put-db-record-dbcp-service",
+              "sensitive" : false
+            },
+            "put-db-record-statement-type" : {
+              "displayName" : "Statement Type",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-statement-type",
+              "sensitive" : false
+            },
+            "put-db-record-update-keys" : {
+              "displayName" : "Update Keys",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-update-keys",
+              "sensitive" : false
+            },
+            "put-db-record-quoted-identifiers" : {
+              "displayName" : "Quote Column Identifiers",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-quoted-identifiers",
+              "sensitive" : false
+            },
+            "put-db-record-unmatched-field-behavior" : {
+              "displayName" : "Unmatched Field Behavior",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-unmatched-field-behavior",
+              "sensitive" : false
+            },
+            "put-db-record-max-batch-size" : {
+              "displayName" : "Maximum Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-max-batch-size",
+              "sensitive" : false
+            },
+            "Data Record Path" : {
+              "displayName" : "Data Record Path",
+              "identifiesControllerService" : false,
+              "name" : "Data Record Path",
+              "sensitive" : false
+            },
+            "table-schema-cache-size" : {
+              "displayName" : "Table Schema Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "table-schema-cache-size",
+              "sensitive" : false
+            },
+            "put-db-record-date-format" : {
+              "displayName" : "Date Format",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-date-format",
+              "sensitive" : false
+            },
+            "put-db-record-quoted-table-identifiers" : {
+              "displayName" : "Quote Table Identifiers",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-quoted-table-identifiers",
+              "sensitive" : false
+            },
+            "Statement Type Record Path" : {
+              "displayName" : "Statement Type Record Path",
+              "identifiesControllerService" : false,
+              "name" : "Statement Type Record Path",
+              "sensitive" : false
+            },
+            "put-db-record-translate-field-names" : {
+              "displayName" : "Translate Field Names",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-translate-field-names",
+              "sensitive" : false
+            },
+            "put-db-record-time-format" : {
+              "displayName" : "Time Format",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-time-format",
+              "sensitive" : false
+            },
+            "put-db-record-query-timeout" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-query-timeout",
+              "sensitive" : false
+            },
+            "rollback-on-failure" : {
+              "displayName" : "Rollback On Failure",
+              "identifiesControllerService" : false,
+              "name" : "rollback-on-failure",
+              "sensitive" : false
+            },
+            "db-type" : {
+              "displayName" : "Database Type",
+              "identifiesControllerService" : false,
+              "name" : "db-type",
+              "sensitive" : false
+            },
+            "put-db-record-timestamp-format" : {
+              "displayName" : "Timestamp Format",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-timestamp-format",
+              "sensitive" : false
+            },
+            "put-db-record-table-name" : {
+              "displayName" : "Table Name",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-table-name",
+              "sensitive" : false
+            },
+            "put-db-record-int96-fields" : {
+              "displayName" : "INT96 Fields",
+              "identifiesControllerService" : false,
+              "name" : "put-db-record-int96-fields",
+              "sensitive" : false
+            },
+            "put-db-record-record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "put-db-record-record-reader",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "com.techx.nifi.processor.standard.NDAPPutDatabaseRecord20241312",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure", "permission.denied", "not.found" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "c89ab6bd-b5c1-3dc9-aea2-374eb1f023f0",
+          "instanceIdentifier" : "1a4cd356-0193-1000-179e-2be5120e541b",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "FetchFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 510.0000620524788,
+            "y" : 63.99999477229534
+          },
+          "properties" : {
+            "Move Conflict Strategy" : "Rename",
+            "Log level when file not found" : "ERROR",
+            "Log level when permission denied" : "ERROR",
+            "File to Fetch" : "${absolute.path}/${filename}",
+            "Completion Strategy" : "None"
+          },
+          "propertyDescriptors" : {
+            "Move Conflict Strategy" : {
+              "displayName" : "Move Conflict Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Move Conflict Strategy",
+              "sensitive" : false
+            },
+            "Log level when file not found" : {
+              "displayName" : "Log level when file not found",
+              "identifiesControllerService" : false,
+              "name" : "Log level when file not found",
+              "sensitive" : false
+            },
+            "Move Destination Directory" : {
+              "displayName" : "Move Destination Directory",
+              "identifiesControllerService" : false,
+              "name" : "Move Destination Directory",
+              "sensitive" : false
+            },
+            "Log level when permission denied" : {
+              "displayName" : "Log level when permission denied",
+              "identifiesControllerService" : false,
+              "name" : "Log level when permission denied",
+              "sensitive" : false
+            },
+            "File to Fetch" : {
+              "displayName" : "File to Fetch",
+              "identifiesControllerService" : false,
+              "name" : "File to Fetch",
+              "sensitive" : false
+            },
+            "Completion Strategy" : {
+              "displayName" : "Completion Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Completion Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.FetchFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "2ce01a7e-5fc2-3866-bbe6-6a41f3804e5a",
+          "instanceIdentifier" : "52e87da6-0193-1000-5441-e9cd695871fb",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "SplitRecord",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 256.0,
+            "y" : 736.0
+          },
+          "properties" : {
+            "Record Writer" : "083075c2-e54a-3d93-9708-d7c757c23b42",
+            "Record Reader" : "bd613d27-2c87-3064-8608-4687c744343a",
+            "Records Per Split" : "1"
+          },
+          "propertyDescriptors" : {
+            "Record Writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "Record Writer",
+              "sensitive" : false
+            },
+            "Record Reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "Record Reader",
+              "sensitive" : false
+            },
+            "Records Per Split" : {
+              "displayName" : "Records Per Split",
+              "identifiesControllerService" : false,
+              "name" : "Records Per Split",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.SplitRecord",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "07689986-c7ee-3bc6-95e8-9038266a642e",
+          "instanceIdentifier" : "23c7df87-0193-1000-fab9-2e0b484bdf96",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1176.0,
+            "y" : 40.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "generate-ff-custom-text" : "{\n  \"ppn_date\" : \"2024-09-10 11:35:19.564503\",\n  \"value_date\" : null,\n  \"actual_end_date\" : null,\n  \"src_sys_name\" : null,\n  \"src_sys_code\" : null,\n  \"txn_id\" : \"213171199136905700\",\n  \"user_id\" : \"7925192\",\n  \"ip_addr\" : \"58.187.92.250\",\n  \"channel\" : \"NewEbank\",\n  \"dsc\" : \"A single external transfer has been added successfully.\",\n  \"log_date\" : \"2024-04-02 00:09:29.138\",\n  \"txn_type\" : 5200,\n  \"business_date\" : \"2024-10-03\",\n  \"amt\" : \"13000000.00\",\n  \"fr_acct_id\" : \"0839821996-1\",\n  \"to_acct_id\" : \"688886366666-70\"\n}",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "mime-type" : {
+              "displayName" : "Mime Type",
+              "identifiesControllerService" : false,
+              "name" : "mime-type",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "1 min",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "41718fcb-b60a-3d21-a0c0-7282763f41f5",
+          "instanceIdentifier" : "52e56cca-0193-1000-d887-081a0b99879c",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1020.162290222107,
+            "y" : 916.6999028795742
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "D:\\sample\\content",
+            "Conflict Resolution Strategy" : "fail"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7a63bd3d-6dd2-3bb8-b710-68d49746694f",
+          "identifier" : "0e8b6025-2ebf-3bca-8238-cfe08f968c6c",
+          "instanceIdentifier" : "1a4cb904-0193-1000-f644-cb36ac358cae",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ListFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 72.0,
+            "y" : 296.0
+          },
+          "properties" : {
+            "Minimum File Age" : "0 sec",
+            "et-initial-listing-target" : "all",
+            "max-listing-time" : "3 mins",
+            "et-time-window" : "3 hours",
+            "et-node-identifier" : "${hostname()}",
+            "Recurse Subdirectories" : "true",
+            "File Filter" : "[^\\.].*",
+            "Include File Attributes" : "true",
+            "Input Directory Location" : "Local",
+            "listing-strategy" : "timestamps",
+            "Input Directory" : "D:\\sample\\live",
+            "target-system-timestamp-precision" : "auto-detect",
+            "track-performance" : "false",
+            "max-performance-metrics" : "100000",
+            "Minimum File Size" : "0 B",
+            "Ignore Hidden Files" : "true",
+            "max-operation-time" : "10 secs"
+          },
+          "propertyDescriptors" : {
+            "Minimum File Age" : {
+              "displayName" : "Minimum File Age",
+              "identifiesControllerService" : false,
+              "name" : "Minimum File Age",
+              "sensitive" : false
+            },
+            "et-initial-listing-target" : {
+              "displayName" : "Entity Tracking Initial Listing Target",
+              "identifiesControllerService" : false,
+              "name" : "et-initial-listing-target",
+              "sensitive" : false
+            },
+            "Maximum File Age" : {
+              "displayName" : "Maximum File Age",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Age",
+              "sensitive" : false
+            },
+            "max-listing-time" : {
+              "displayName" : "Max Directory Listing Time",
+              "identifiesControllerService" : false,
+              "name" : "max-listing-time",
+              "sensitive" : false
+            },
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "Maximum File Size" : {
+              "displayName" : "Maximum File Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Size",
+              "sensitive" : false
+            },
+            "et-time-window" : {
+              "displayName" : "Entity Tracking Time Window",
+              "identifiesControllerService" : false,
+              "name" : "et-time-window",
+              "sensitive" : false
+            },
+            "et-node-identifier" : {
+              "displayName" : "Entity Tracking Node Identifier",
+              "identifiesControllerService" : false,
+              "name" : "et-node-identifier",
+              "sensitive" : false
+            },
+            "Recurse Subdirectories" : {
+              "displayName" : "Recurse Subdirectories",
+              "identifiesControllerService" : false,
+              "name" : "Recurse Subdirectories",
+              "sensitive" : false
+            },
+            "File Filter" : {
+              "displayName" : "File Filter",
+              "identifiesControllerService" : false,
+              "name" : "File Filter",
+              "sensitive" : false
+            },
+            "Path Filter" : {
+              "displayName" : "Path Filter",
+              "identifiesControllerService" : false,
+              "name" : "Path Filter",
+              "sensitive" : false
+            },
+            "Include File Attributes" : {
+              "displayName" : "Include File Attributes",
+              "identifiesControllerService" : false,
+              "name" : "Include File Attributes",
+              "sensitive" : false
+            },
+            "Input Directory Location" : {
+              "displayName" : "Input Directory Location",
+              "identifiesControllerService" : false,
+              "name" : "Input Directory Location",
+              "sensitive" : false
+            },
+            "listing-strategy" : {
+              "displayName" : "Listing Strategy",
+              "identifiesControllerService" : false,
+              "name" : "listing-strategy",
+              "sensitive" : false
+            },
+            "Input Directory" : {
+              "displayName" : "Input Directory",
+              "identifiesControllerService" : false,
+              "name" : "Input Directory",
+              "sensitive" : false
+            },
+            "target-system-timestamp-precision" : {
+              "displayName" : "Target System Timestamp Precision",
+              "identifiesControllerService" : false,
+              "name" : "target-system-timestamp-precision",
+              "sensitive" : false
+            },
+            "track-performance" : {
+              "displayName" : "Track Performance",
+              "identifiesControllerService" : false,
+              "name" : "track-performance",
+              "sensitive" : false
+            },
+            "max-performance-metrics" : {
+              "displayName" : "Maximum Number of Files to Track",
+              "identifiesControllerService" : false,
+              "name" : "max-performance-metrics",
+              "sensitive" : false
+            },
+            "Minimum File Size" : {
+              "displayName" : "Minimum File Size",
+              "identifiesControllerService" : false,
+              "name" : "Minimum File Size",
+              "sensitive" : false
+            },
+            "Ignore Hidden Files" : {
+              "displayName" : "Ignore Hidden Files",
+              "identifiesControllerService" : false,
+              "name" : "Ignore Hidden Files",
+              "sensitive" : false
+            },
+            "et-state-cache" : {
+              "displayName" : "Entity Tracking State Cache",
+              "identifiesControllerService" : true,
+              "name" : "et-state-cache",
+              "sensitive" : false
+            },
+            "max-operation-time" : {
+              "displayName" : "Max Disk Operation Time",
+              "identifiesControllerService" : false,
+              "name" : "max-operation-time",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "1 min",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ListFile",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}
